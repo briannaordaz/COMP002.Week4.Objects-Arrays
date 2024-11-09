@@ -41,3 +41,25 @@ console.log(all(idk(1, 10))); // output: 55
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+function reverseCode(cde) {
+    const backwards = [];
+    for (let i = cde.length - 1; i >= 0; i--) {
+        backwards.push(cde[i]);
+    }
+    return backwards;
+}
+
+console.log(reverseCode(["X", "Y", "Z"])); // output: (3) ['Z', 'Y', 'X']
+
+
+function reverseCodeInPlace(cde) {
+    for (let i = 0; i < Math.floor(cde.length / 2); i++) {
+        let cal = cde[i];
+        cde[i] = cde[cde.length - 1 - i];
+        cde[cde.length - 1 - i] = cal;
+    }
+}
+
+let arrayIdk = [96, 97, 98, 99, 100];
+reverseCodeInPlace(arrayIdk);
+console.log(arrayIdk); // Output: (5) [100, 99,98, 97, 96]
