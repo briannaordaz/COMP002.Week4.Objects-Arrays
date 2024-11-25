@@ -2,14 +2,17 @@
 // containing all the numbers from start up to (and including) end.
 // Example output:
 // console.log(range(1, 10)); // outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-function idk (start, end) {
-    const outcome = [];
-    for (let i = start; i <= end; i++) {
-        outcome.push(i);
-    }
-    return outcome;
-}
 
+
+// This is the name of the function and the "(start, end)" are the two parameters of the function, when you call it, it will give you the first number you added on the "start", the numbers in between, and the last number you added on the "end"
+function idk (start, end) {
+    const outcome = []; //const is used to declare a variable, "outcome" is the name of the variable and is being declared to "[ ]" (an empty array)
+    for (let i = start; i <= end; i++) {  // This is a for-loop and will make the code inside the function loop, the "let i = start;" declares i to start, and the "i <= end;" tells the code to stop when i is less than or equal to "end", and the "i++" tells the function to keep adding another number to the code.
+        outcome.push(i); // this will add a value to the array 
+    }
+    return outcome;  // this will output the value of the outcome
+}
+// using console.log is how you call a function
 console.log(idk(50, 60)); // output: (11) [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
 
 
